@@ -27,7 +27,7 @@ func main() {
 		panic(err)
 	}
 
-	// Dad Jokes como RESOURCE (dados do banco/API)
+	// Dad Jokes como RESOURCE (dados do API)
 	err = server.RegisterResource("jokes://random", "dad_jokes", "Random dad jokes from database", "application/json", func() (*mcp_golang.ResourceResponse, error) {
 		// Buscar dados do banco/API
 		response, err := http.Get("https://jokefather.com/api/jokes/random")
